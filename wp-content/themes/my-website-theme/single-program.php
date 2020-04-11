@@ -1,4 +1,3 @@
-single-program.php -> details per PROGRAM post <br>
 <?php // exercise 1 lecture 3
 the_ID();
 get_header();

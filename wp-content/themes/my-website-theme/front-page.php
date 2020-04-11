@@ -1,4 +1,3 @@
-front page.php -> interior design
 <?php get_header(); ?>
 <?php
 $homepagePosts = new WP_Query(array(

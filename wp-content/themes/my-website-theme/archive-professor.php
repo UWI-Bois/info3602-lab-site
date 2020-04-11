@@ -1,4 +1,3 @@
-archive-professor page -> professors from the past
 <?php
     get_header();
 

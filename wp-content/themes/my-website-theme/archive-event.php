@@ -1,4 +1,3 @@
-archive-event page -> events from the past
 <?php
     get_header();
 

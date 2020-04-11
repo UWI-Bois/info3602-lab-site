@@ -1,4 +1,3 @@
-page.php -> details per page
 <?php // exercise 1 lecture 3
 get_header();
 // jump back into php

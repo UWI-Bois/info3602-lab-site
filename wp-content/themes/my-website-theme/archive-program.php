@@ -1,4 +1,3 @@
-archive-program page -> programs from the past
 <?php
     get_header();
 

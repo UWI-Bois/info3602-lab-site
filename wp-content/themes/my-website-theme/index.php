@@ -1,4 +1,3 @@
-index page -> blog listing
 <?php
 
     get_header();

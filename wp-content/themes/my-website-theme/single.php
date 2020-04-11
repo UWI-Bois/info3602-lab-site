@@ -1,4 +1,3 @@
-single.php -> details per post
 <?php // exercise 1 lecture 3
 get_header();
 while(have_posts()){ // iterate through all posts

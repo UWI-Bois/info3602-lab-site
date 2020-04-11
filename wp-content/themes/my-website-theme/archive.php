@@ -1,4 +1,4 @@
-archive page -> posts from the past
+
 <?php
     get_header();
 
