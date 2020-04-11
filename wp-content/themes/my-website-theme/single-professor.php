@@ -53,8 +53,12 @@ while(have_posts()){ // iterate through all posts
                     </div>
             </div>
         </div>
+        <hr class="section-break">
+        <a href="<?php echo get_post_type_archive_link('professor'); ?>" class="btn btn--large btn--blue">View All Professors</a>
     </div>
-    <?php
+
+
+	<?php
 } // end while
 get_footer();
 ?>

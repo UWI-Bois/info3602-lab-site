@@ -6,7 +6,7 @@
                 <div class="group">
 
                     <div class="site-footer__col-one">
-                        <h1 class="school-logo-text school-logo-text--alt-color"><a href="#"><strong>Fictional</strong> University</a></h1>
+                        <h1 class="school-logo-text school-logo-text--alt-color"><a href="#"><strong>Bizarre</strong> University</a></h1>
                         <p><a class="site-footer__link" href="#">555.555.5555</a></p>
                     </div>
 
@@ -41,28 +41,16 @@
                             <ul class="min-list social-icons-list group">
                                 <li><a href="#" class="social-color-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                 <li><a href="#" class="social-color-twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                <li><a href="#" class="social-color-youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCwixW22hYGIz_u0pkoxQTjg" class="social-color-youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
                                 <li><a href="#" class="social-color-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                <li><a href="#" class="social-color-instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.instagram.com/uwitag/" class="social-color-instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                             </ul>
                         </nav>
                     </div>
                 </div>
 
             </div>
-            page id = <?php $pageID = get_the_ID(); echo $pageID; ?> <br><br>
-<!--            checking for a parent page -> wp_get_post_parent_ID(get_the_ID());<BR>-->
-<!--            if 0, then no parent is present, else, the id of the parent page. wp_get_post_parent_ID(get_the_ID()); = --><?php //$isChild = wp_get_post_parent_id($pageID); echo $isChild; ?><!-- since 0 is returned, we know that this page/post does not have a parent <br><br>-->
-<!---->
-<!--            checking status of this page:-->
-<!--            --><?php
-//            $string = "Status: ";
-//            echo var_dump($isChild);
-//            echo var_dump($pageID);
-//            if($isChild > 0) $string .= "child";
-//            else $string .= "not a child page";
-//            echo $string;
-            ?>
+
         </footer>
 <!--        search feature-->
 <!--        <div class="search-overlay search-overlay--active">-->

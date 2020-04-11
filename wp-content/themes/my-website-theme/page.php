@@ -26,7 +26,7 @@ while (have_posts()) { // iterate through all posts
                 </span>
                     </p>
                 </div>
-        <?php } else echo "no kiddies"; ?>
+        <?php } //else echo "no kiddies"; ?>
 
         <?php
             $testArray = get_pages(array(
@@ -35,10 +35,12 @@ while (have_posts()) { // iterate through all posts
             if($theParent or $testArray){
         ?>
                 <div class="page-links">
-                    <h2 class="page-links__title"><a href="<?php echo get_permalink($theParent); ?>">
+                    <h2 class="page-links__title">
+                        <a href="<?php echo get_permalink($theParent); ?>">
                             <?php echo get_the_title($theParent); ?>
-                        </a></h2>
-                    <ul>
+                        </a>
+                    </h2>
+                    <ul class="min-list">
                         <?php
                         if($theParent) $findChildrenOf = $theParent; // if the page is the parent page, then get the children of this parent page
                         else $findChildrenOf = get_the_ID(); // otherwise, we are on the child page

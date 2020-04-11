@@ -1,5 +1,5 @@
 <?php // exercise 1 lecture 3
-the_ID();
+//the_ID();
 get_header();
 while(have_posts()){ // iterate through all posts
     the_post(); // curr post
@@ -56,7 +56,12 @@ while(have_posts()){ // iterate through all posts
                 <li class="professor-card__list-item">
                     <a class="professor-card" href="<?php the_permalink(); ?>">
                         <img class="professor-card__image" src="<?php the_post_thumbnail_url('professorLandscape'); ?>" alt="">
-                        <span class="professor-card__name"> <?php the_title(); echo ' ; pageid = '; the_ID(); ?> </span>
+                        <span class="professor-card__name">
+                            <?php
+                            the_title();
+//                            echo ' ; pageid = '; the_ID();
+                            ?>
+                        </span>
                     </a>
                 </li>
                 <?php
@@ -116,9 +121,9 @@ while(have_posts()){ // iterate through all posts
 	        }// end while
             wp_reset_postdata();
         }
-
-
         ?>
+        <hr class="section-break">
+        <a href="<?php echo get_post_type_archive_link('program'); ?>" class="btn btn--large btn--blue">View All Programs</a>
     </div>
     <?php
 } // end while

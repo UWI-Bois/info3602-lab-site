@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 <?php
 $homepagePosts = new WP_Query(array(
-    'posts_per_page' => 2,
-    'category_name' => 'Technology',
+    'posts_per_page' => 3,
+//    'category_name' => 'Technology',
     'orderby' => 'title'
 ));
 $homepageEvents = new WP_Query(array(
-    'posts_per_page' => -1,
+    'posts_per_page' => 3,
     'post_type'=> 'event',
     'meta_key' => 'event_date',
     'orderby' => 'meta_value_num',
@@ -27,6 +27,7 @@ $homepageEvents = new WP_Query(array(
     <div class="page-banner__content container t-center c-white">
         <h1 class="headline headline--large">Welcome!</h1>
         <h2 class="headline headline--medium">We think you&rsquo;ll like it here.</h2>
+        <h4 class="headline headline--small">Be wary of enemy <strong>stand users</strong></h4>
         <h3 class="headline headline--small">Why don&rsquo;t you check out the <strong>major</strong> you&rsquo;re interested in?</h3>
         <a href="<?php echo get_post_type_archive_link('program'); ?>" class="btn btn--large btn--blue">Find Your Major</a>
     </div>
@@ -56,6 +57,7 @@ $homepageEvents = new WP_Query(array(
                 </div>
             <?php
             }// end while
+            wp_reset_postdata();
             ?>
 
 
@@ -74,11 +76,15 @@ $homepageEvents = new WP_Query(array(
                 ?>
                 <div class="event-summary">
                     <a class="event-summary__date event-summary__date--beige t-center" href="<?php the_permalink(); ?>">
-                        <span class="event-summary__month">Jan</span>
-                        <span class="event-summary__day">20</span>
+	                    <?php
+//	                    $eventDate = get_the_date();
+//	                    $eventDate = new DateTime(get_field('date'));
+	                    ?>
+                        <span class="event-summary__month"><?php echo get_the_date('M') ?></span>
+                        <span class="event-summary__day"><?php echo get_the_date('d') ?></span>
                     </a>
                     <div class="event-summary__content">
-                        <h5 class="event-summary__title headline headline--tiny"><a href="#"><?php the_title(); ?></a></h5>
+                        <h5 class="event-summary__title headline headline--tiny"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
                         <p><?php echo wp_trim_words(get_the_content(), 20); ?><a href="<?php the_permalink(); ?>" class="nu gray">Read more</a></p>
                     </div>
                 </div>
@@ -117,31 +123,31 @@ $homepageEvents = new WP_Query(array(
         <div class="hero-slider__interior container">
             <div class="hero-slider__overlay">
                 <h2 class="headline headline--medium t-center">Free Food</h2>
-                <p class="t-center">Fictional University offers lunch plans for those in need.</p>
+                <p class="t-center">Bizarre University offers lunch plans for those in need.</p>
                 <p class="t-center no-margin"><a href="#" class="btn btn--blue">Learn more</a></p>
             </div>
         </div>
     </div>
 </div>
 
-
-<a href="https://www.w3schools.com">Visit W3Schools</a>
-<p> testing orange teknologee  </p>
-<?php // exercise 1 lecture 3
-while(have_posts()){ // iterate through all posts
-    the_post(); // curr post
-    // jump out of php into html
-    ?>
-    <h2>
-    <a href="<?php the_permalink(); ?>">
-    <? the_title(); ?>
-    </a>
-    </h2>
-    <p> <?php the_content(); ?> </p>
-    <hr>
-    <?php
-} // end while
-?>
+<!---->
+<!--<a href="https://www.w3schools.com">Visit W3Schools</a>-->
+<!--<p> testing orange teknologee  </p>-->
+<?php //// exercise 1 lecture 3
+//while(have_posts()){ // iterate through all posts
+//    the_post(); // curr post
+//    // jump out of php into html
+//    ?>
+<!--    <h2>-->
+<!--    <a href="--><?php //the_permalink(); ?><!--">-->
+<!--    --><?// the_title(); ?>
+<!--    </a>-->
+<!--    </h2>-->
+<!--    <p> --><?php //the_content(); ?><!-- </p>-->
+<!--    <hr>-->
+<!--    --><?php
+//} // end while
+//?>
 
 <!-- ending body-->
 <?php get_footer(); ?>

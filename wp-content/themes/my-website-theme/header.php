@@ -20,14 +20,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11" />
     <link rel="stylesheet" href="style.css"/>
-    <title>Fictional University</title>
+    <i class="site-header__menu-trigger fa fa-bars" aria-hidden="true">
+
+    </i>
+    <title>Bizarre University</title>
 </head>
 <body>
     <header class="site-header">
         <div class="container">
-            <h1 class="school-logo-text float-left"><a href="<?php echo site_url(); ?>"><strong>Fictional</strong> University</a></h1>
+            <h1 class="school-logo-text float-left"><a href="<?php echo site_url(); ?>"><strong>Bizarre</strong> University</a></h1>
 <!--            <span class="js-search-trigger site-header__search-trigger"><i class="fa fa-search" aria-hidden="true"></i></span>-->
-<!--            <i class="site-header__menu-trigger fa fa-bars" aria-hidden="true"></i>-->
+
             <div class="site-header__menu group">
                 <nav class="main-navigation">
                     <?php
@@ -47,6 +50,7 @@
                     <a href="#" class="btn btn--small btn--orange float-left push-right">Login</a>
                     <a href="#" class="btn btn--small  btn--dark-orange float-left">Sign Up</a>
 <!--                    <span class="search-trigger js-search-trigger"><i class="fa fa-search" aria-hidden="true"></i></span>-->
+
                 </div>
             </div>
         </div>
