@@ -121,8 +121,25 @@
     function noSubsAdminBar(){
 	    if(isSubscriber()) show_admin_bar(false);
     }
-
     add_action('wp_loaded', 'noSubsAdminBar');
 
+    /*
+     * customize login screen:
+     * arg 1 - object to customize (the hook, in this case, clicking wordpress logo on login screen)
+     * arg 2 - function to achieve this
+     */
 
+        function ourHeaderUrl(){
+            return esc_url(site_url('/'));
+        }
+        add_filter('login_headerurl', 'ourHeaderUrl');
 
+    // load custom CSS on login screen
+        function ourLoginCSS(){
+            wp_enqueue_style('university_main_styles', get_stylesheet_uri());
+            wp_enqueue_style(
+	            'custom-google-font',
+                'https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i'
+            );
+        }
+        add_action('login_enqueue_scripts', 'ourLoginCSS');
