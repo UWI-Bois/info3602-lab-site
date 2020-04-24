@@ -98,7 +98,48 @@
 				</div>
 			</div>
 		</div>
-<?php
+    <?php
     }
 
+    function isSubscriber(){
+	    $currUser = wp_get_current_user();
+	    $numRoles = count($currUser->roles);
+	    $userRole = $currUser->roles[0];
+	    if($numRoles == 1 AND $userRole == 'subscriber') return true;
+	    return false;
+    }
 
+    function redirectSubsToFrontend(){
+        if(isSubscriber()){
+            wp_redirect(site_url('/'));
+            exit; // tell php to stop once someone is redirected
+        }
+    }
+    add_action('admin_init', 'redirectSubsToFrontend');
+
+
+    function noSubsAdminBar(){
+	    if(isSubscriber()) show_admin_bar(false);
+    }
+    add_action('wp_loaded', 'noSubsAdminBar');
+
+    /*
+     * customize login screen:
+     * arg 1 - object to customize (the hook, in this case, clicking wordpress logo on login screen)
+     * arg 2 - function to achieve this
+     */
+
+        function ourHeaderUrl(){
+            return esc_url(site_url('/'));
+        }
+        add_filter('login_headerurl', 'ourHeaderUrl');
+
+    // load custom CSS on login screen
+        function ourLoginCSS(){
+            wp_enqueue_style('university_main_styles', get_stylesheet_uri());
+            wp_enqueue_style(
+	            'custom-google-font',
+                'https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|Roboto:100,300,400,400i,700,700i'
+            );
+        }
+        add_action('login_enqueue_scripts', 'ourLoginCSS');

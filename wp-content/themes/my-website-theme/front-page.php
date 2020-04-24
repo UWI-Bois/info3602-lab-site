@@ -1,24 +1,24 @@
 <?php get_header(); ?>
 <?php
 $homepagePosts = new WP_Query(array(
-    'posts_per_page' => 3,
+    'posts_per_page' => 5,
 //    'category_name' => 'Technology',
     'orderby' => 'title'
 ));
 $homepageEvents = new WP_Query(array(
-    'posts_per_page' => 3,
+    'posts_per_page' => 5,
     'post_type'=> 'event',
     'meta_key' => 'event_date',
     'orderby' => 'meta_value_num',
     'order' => 'ASC',
-    'meta_query' => array(
-        array(
-            'key' => 'event_date',
-            'compare' => '>=',
-            'value' => date('Ymd'),
-            'type' => 'numeric'
-        )
-    )
+//    'meta_query' => array(
+//        array(
+//            'key' => 'event_date',
+//            'compare' => '>=',
+//            'value' => date('Ymd'),
+//            'type' => 'numeric'
+//        )
+//    )
 ));
 ?>
 <!--inside body-->
