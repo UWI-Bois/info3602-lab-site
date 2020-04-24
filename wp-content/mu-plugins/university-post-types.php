@@ -24,6 +24,8 @@ function university_post_types(){
     ));
 
 	register_post_type('program',array(
+		'capability_type' => 'program',
+		'map_meta_cap' => true,
 		'supports' => array('title', 'editor'),
 		'rewrite'=> array('slug' => 'programs' ),
 		'has_archive' => true,
