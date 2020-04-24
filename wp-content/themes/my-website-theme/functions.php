@@ -98,7 +98,31 @@
 				</div>
 			</div>
 		</div>
-<?php
+    <?php
     }
+
+    function isSubscriber(){
+	    $currUser = wp_get_current_user();
+	    $numRoles = count($currUser->roles);
+	    $userRole = $currUser->roles[0];
+	    if($numRoles == 1 AND $userRole == 'subscriber') return true;
+	    return false;
+    }
+
+    function redirectSubsToFrontend(){
+        if(isSubscriber()){
+            wp_redirect(site_url('/'));
+            exit; // tell php to stop once someone is redirected
+        }
+    }
+    add_action('admin_init', 'redirectSubsToFrontend');
+
+
+    function noSubsAdminBar(){
+	    if(isSubscriber()) show_admin_bar(false);
+    }
+
+    add_action('wp_loaded', 'noSubsAdminBar');
+
 
 
