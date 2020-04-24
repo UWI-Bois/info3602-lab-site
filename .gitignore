@@ -1,3 +1,8 @@
+# ignore these directories and files in "public"
+public/wp-admin
+public/wp-includes
+public/*.*
+
 # ignore everything in the root except the "wp-content" directory.
 !wp-content/
 
@@ -24,5 +29,5 @@ node_modules/
 # ignore .idea
 .idea/
 
-# ignore plugins folder
-wp-content/plugins/*
+# track some root files
+!README.md
