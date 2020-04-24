@@ -1,0 +1,47 @@
+# ignore these
+# organize root
+# folders
+wp-admin/
+wp-includes/
+# files
+wp-activate.php
+wp-blog-header.php
+wp-comments-post.php
+wp-config-sample.php
+wp-config.php
+wp-cron.php
+wp-links-opml.php
+wp-load.php
+wp-login.php
+wp-mail.php
+wp-settings.php
+wp-signup.php
+wp-trackback.php
+xmlrpc.php
+index.php
+readme.html
+# organize content folder
+wp-content/ai1wm-backups/
+wp-content/cache/
+wp-content/plugins/
+wp-content/w3tc-config/
+wp-content/uploads/
+wp-content/languages/
+wp-content/themes/twenty*
+# build stuff
+build/
+node_modules/
+*.log
+*.sql
+*.sqlite
+.idea/
+
+# keep these
+!wp-content/mu-plugins
+!wp-content/themes/my-website-theme*
+!README.md
+!package.json
+!package-lock.json
+!license.txt
+!gulpfile.js
+!settings.js
