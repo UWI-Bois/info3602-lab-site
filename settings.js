@@ -1,7 +1,14 @@
-var theme_dir = './wp-content/themes/my-website-theme/';
-console.log(`Settings.js says: trying to check theme dir -> ${site_url} -> please double check this with the path in your ide!`);
-exports.themeLocation = theme_dir;
+// exports.themeLocation = './app/wp-content/themes/fictional-university-theme/';
+// exports.urlToPreview = 'http://fictional-university.test';
 
-var site_url = 'http://anansiuniversity.local/';
-console.log(`Settings.js says: trying to check site url -> ${site_url} -> please double check this with the url in your browser!`);
-exports.urlToPreview = site_url;
+// If you're using Local by Flywheel you will
+// want your settings to be similar to the examples below:
+
+exports.themeLocation = './public/wp-content/themes/my-website-theme/';
+exports.urlToPreview = 'http://anansi-university.local/';
+
+// Simply remove the two slashes at the front of those lines
+// to uncomment them and then delete lines #1 and #2.
+
+// Be SURE to update urlToPreview to YOUR domain and not mine.
+// Be SURE to update themeLocation to YOUR theme folder name
