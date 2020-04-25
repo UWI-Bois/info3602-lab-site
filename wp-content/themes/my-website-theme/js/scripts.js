@@ -10,7 +10,8 @@ import Search from './modules/Search';
 // Instantiate a new object using our modules/classes
 var mobileMenu = new MobileMenu();
 var heroSlider = new HeroSlider();
-var Search = new Search();
+var search = new Search();
+
 
 alert("this is a js test");
-console.log("this is a js test");
+console.log("js test");

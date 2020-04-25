@@ -28,6 +28,7 @@ class Search{
     // key event methods
     keyPressDispatcher(e){
         console.log("this is a test")
+        if(e.keyCode == 83) this.openOverlay();
     }
 }
 export default Search;
