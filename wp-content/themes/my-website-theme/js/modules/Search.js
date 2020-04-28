@@ -1,4 +1,6 @@
 import $ from 'jquery';
+let settings = require('./settings');
+console.log("search.js says: " + settings.urlToPreview);
 class Search{
     // init objects
     constructor() {
@@ -55,8 +57,23 @@ class Search{
         // send to wordpress server
         // populates the results section of the search feature
         // div is in footer.php
-        console.log("RESULTS");
-        this.resultsDiv.html("Imagine search results here...");
+        // console.log("RESULTS");
+        // this.resultsDiv.html("Imagine search results here...");
+
+        // jquery function,
+        // param 1: a url to send a request to,
+        // param 2: name of a functionto call after the url responds with the json data.
+        var param1 = settings.urlToPreview + '/wp-json/wp/v2/posts?search=' + this.searchField.val();
+        console.log("search.js -> getResults() says: API url -> " + param1);
+        $.getJSON(
+            // url to get json from
+            param1,
+            // function to use the json data
+            function (posts) {
+                alert(posts[0].title.rendered);
+            }
+        );
+
         this.isSpinnerVisible = false;
     }
     // open overlay
