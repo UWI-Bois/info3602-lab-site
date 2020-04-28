@@ -62,7 +62,8 @@ class Search{
         // jquery function,
         // param 1: a url to send a request to,
         // param 2: name of a functionto call after the url responds with the json data.
-        var param1 = settings.urlToPreview + '/wp-json/wp/v2/posts?search=' + this.searchField.val();
+        // var param1 = settings.urlToPreview + '/wp-json/wp/v2/posts?search=' + this.searchField.val(); // old, local
+        var param1 = universityData.root_url + '/wp-json/wp/v2/posts?search=' + this.searchField.val(); // old, local
         console.log("search.js -> getResults() says: API url -> " + param1);
         $.getJSON(
             param1,
@@ -95,6 +96,9 @@ class Search{
         // open search overlay by adjusting and adding html elements dynamically
         this.searchOverlay.addClass("search-overlay--active"); // open the search overlay
         $("body").addClass("body-no-scroll"); // prevent scrolling while searching
+        setTimeout(
+            () => this.searchField.focus(), 301
+        );
         this.isOverlayOpen = true; // checks
     }
     // close overlay
