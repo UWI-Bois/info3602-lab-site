@@ -58,7 +58,6 @@ class Search{
         // populates the results section of the search feature
         // div is in footer.php
         // console.log("RESULTS");
-        // this.resultsDiv.html("Imagine search results here...");
 
         // jquery function,
         // param 1: a url to send a request to,
@@ -66,11 +65,26 @@ class Search{
         var param1 = settings.urlToPreview + '/wp-json/wp/v2/posts?search=' + this.searchField.val();
         console.log("search.js -> getResults() says: API url -> " + param1);
         $.getJSON(
-            // url to get json from
             param1,
-            // function to use the json data
-            function (posts) {
-                alert(posts[0].title.rendered);
+            posts=>{ // ES6 arrow function syntax, an alternate way of using js syntax for binding context
+                // using `` for template literals, and encasing js code in ${} padding
+                // these template literals done support if statements in js,
+                // using a ternary operator is a good workaround, eg:
+                // ${posts.length ? '<ul class="link-list min-list">' : '<p>No general information matches that search.</p>'}
+                var testArray = ['red', 'orange', 'yellow']; // test array to test map function
+                // the map function works similar to a foreach. .join('') at the end to convert to string without commas
+                this.resultsDiv.html(`
+                    <h2 class="search-overlay__section-title">General Information</h2>
+                    
+                    ${posts.length ? '<ul class="link-list min-list">' : '<p>no matches were found :(</p>'}
+                        ${posts.map(item => `
+                            <li> 
+                                <a href="${item.link}">${item.title.rendered}</a>
+                            </li>
+                            `).join('')
+                        }
+                    ${posts.length ? '</ul>' : ''}
+                `);
             }
         );
 
