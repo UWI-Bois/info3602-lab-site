@@ -1,25 +1,54 @@
-var gulp = require('gulp');
-var cssnano = require('gulp-cssnano');
-var sass = require('gulp-sass');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
+var gulp = require('gulp'),
+    settings = require('./settings'),
+    webpack = require('webpack'),
+    browserSync = require('browser-sync').create(),
+    postcss = require('gulp-postcss'),
+    rgba = require('postcss-hexrgba'),
+    autoprefixer = require('autoprefixer'),
+    cssvars = require('postcss-simple-vars'),
+    nested = require('postcss-nested'),
+    cssImport = require('postcss-import'),
+    mixins = require('postcss-mixins'),
+    colorFunctions = require('postcss-color-function');
 
+gulp.task('styles', function() {
+  return gulp.src(settings.themeLocation + 'css/style.css')
+      .pipe(postcss([cssImport, mixins, cssvars, nested, rgba, colorFunctions, autoprefixer]))
+      .on('error', (error) => console.log(error.toString()))
+      .pipe(gulp.dest(settings.themeLocation));
+});
 
-function mytask(callback){
-    // body
+gulp.task('scripts', function(callback) {
+  webpack(require('./webpack.config.js'), function(err, stats) {
+    if (err) {
+      console.log(err.toString());
+    }
+
+    console.log(stats.toString());
     callback();
-}
+  });
+});
 
-exports.mytask = mytask;
+gulp.task('watch', function() {
+  browserSync.init({
+    notify: false,
+    proxy: settings.urlToPreview,
+    ghostMode: false
+  });
 
-function defaultTask(cb) {
-    console.log('running default task: uglify js');
-    var path1 = 'wp-content/themes/my-website-theme/js/scripts.js';
-    var path2 = 'js/**/*.js';
-    gulp.src(path1)
-        .pipe(uglify())
-        .pipe(gulp.dest('build'));
-    cb();
-}
+  gulp.watch('./**/*.php', function() {
+    browserSync.reload();
+  });
+  gulp.watch(settings.themeLocation + 'css/**/*.css', gulp.parallel('waitForStyles'));
+  gulp.watch([settings.themeLocation + 'js/modules/*.js', settings.themeLocation + 'js/scripts.js'], gulp.parallel('waitForScripts'));
+});
 
-exports.default = defaultTask
+gulp.task('waitForStyles', gulp.series('styles', function() {
+  return gulp.src(settings.themeLocation + 'style.css')
+      .pipe(browserSync.stream());
+}))
+
+gulp.task('waitForScripts', gulp.series('scripts', function(cb) {
+  browserSync.reload();
+  cb()
+}))

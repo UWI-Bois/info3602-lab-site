@@ -1,32 +1,36 @@
 {
-  "name": "public",
+  "name": "fictional-university-lwc",
   "version": "1.0.0",
-  "description": "modules for anansi",
+  "description": "",
   "main": "index.js",
-  "dependencies": {
-    "gulp-concat": "^2.6.1",
-    "gulp-cssnano": "^2.1.3",
-    "gulp-sass": "^4.0.2"
-  },
-  "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-uglify": "^3.0.2",
-    "jquery": "^3.4.1"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gulpwatch": "gulp watch",
+    "gulpstyles": "gulp styles",
+    "gulpscripts": "gulp scripts"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jefroy/INFO3602-WEB2.git"
-  },
-  "keywords": [
-    "anansi"
-  ],
-  "author": "jj",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jefroy/INFO3602-WEB2/issues"
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "autoprefixer": "^9.6.1",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.2.0",
+    "gulp-postcss": "^8.0.0",
+    "postcss-color-function": "^4.1.0",
+    "postcss-hexrgba": "^1.0.2",
+    "postcss-import": "^12.0.1",
+    "postcss-mixins": "^6.2.2",
+    "postcss-nested": "^4.1.2",
+    "postcss-simple-vars": "^5.0.2",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
   },
-  "homepage": "https://github.com/jefroy/INFO3602-WEB2#readme"
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "normalize.css": "^8.0.1",
+    "slick-carousel": "^1.8.1"
+  }
 }
