@@ -12,6 +12,4 @@ var mobileMenu = new MobileMenu();
 var heroSlider = new HeroSlider();
 var search = new Search();
 
-
-alert("this is a js test");
 console.log("js test");

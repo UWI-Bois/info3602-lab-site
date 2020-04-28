@@ -29,9 +29,8 @@
     "webpack-cli": "^3.3.6"
   },
   "dependencies": {
-    "jquery": "^3.5.0",
+    "jquery": "^3.4.1",
     "normalize.css": "^8.0.1",
-    "slick": "^1.12.2",
     "slick-carousel": "^1.8.1"
   }
 }
