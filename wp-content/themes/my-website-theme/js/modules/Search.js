@@ -3,6 +3,7 @@ class Search{
     // init objects
     constructor() {
         // leveraging jquery library
+        console.log('search object init');
         this.openButton = $(".js-search-trigger");
         this.closeButton = $(".search-overlay__close");
         this.searchOverlay = $(".search-overlay");

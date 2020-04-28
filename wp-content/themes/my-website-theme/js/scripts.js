@@ -12,4 +12,4 @@ var mobileMenu = new MobileMenu();
 var heroSlider = new HeroSlider();
 var search = new Search();
 
-console.log("js test");
+console.log("scripts.js says hi :)");
