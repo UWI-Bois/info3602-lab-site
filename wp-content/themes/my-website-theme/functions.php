@@ -1,4 +1,5 @@
 <?php
+require get_theme_file_path('inc/search-route.php'); // i think this makes it global/callable
 // this is backend stuff that will be called by wordpress
     function university_files(){
 	    wp_enqueue_script('main-university-js', get_theme_file_uri('/js/scripts-bundled.js'), array('jquery'), '1.0',true);
