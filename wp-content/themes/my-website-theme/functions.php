@@ -156,3 +156,19 @@
             );
         }
         add_action('login_enqueue_scripts', 'ourLoginCSS');
+
+
+// customizing the rest api call
+function university_custom_rest(){
+    // add custom fields to json api :)
+    register_rest_field(
+            'post', // post type
+        'authorName', // json property name
+        array(
+                'get_callback' => function(){ // the php code we want to run
+                    return get_the_author();
+                }
+        )
+    );
+}
+add_action('rest_api_init', 'university_custom_rest');

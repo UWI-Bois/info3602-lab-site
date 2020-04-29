@@ -1,6 +1,4 @@
 import $ from 'jquery';
-let settings = require('./settings');
-console.log("search.js says: " + settings.urlToPreview);
 class Search{
     // init objects
     constructor() {
@@ -21,7 +19,6 @@ class Search{
         this.isSpinnerVisible = false;
         this.resultsDiv = $("#search-overlay__results");
     }
-
     //events
     events(){
         this.openButton.on("click", this.openOverlay.bind(this)); // .bind ensures that the function stays within this object's context, instead of making its own.
@@ -80,7 +77,7 @@ class Search{
                     ${posts.length ? '<ul class="link-list min-list">' : '<p>no matches were found :(</p>'}
                         ${posts.map(item => `
                             <li> 
-                                <a href="${item.link}">${item.title.rendered}</a>
+                                <a href="${item.link}">${item.title.rendered}</a> by ${item.authorName}
                             </li>
                             `).join('')
                         }
