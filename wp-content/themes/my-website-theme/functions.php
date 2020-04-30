@@ -1,5 +1,6 @@
 <?php
 require get_theme_file_path('inc/search-route.php'); // i think this makes it global/callable
+require get_theme_file_path('inc/exercise-week14.php');
 // this is backend stuff that will be called by wordpress
     function university_files(){
 	    wp_enqueue_script('main-university-js', get_theme_file_uri('/js/scripts-bundled.js'), array('jquery'), '1.0',true);
@@ -142,7 +143,6 @@ require get_theme_file_path('inc/search-route.php'); // i think this makes it gl
      * arg 1 - object to customize (the hook, in this case, clicking wordpress logo on login screen)
      * arg 2 - function to achieve this
      */
-
         function ourHeaderUrl(){
             return esc_url(site_url('/'));
         }
