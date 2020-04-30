@@ -5,6 +5,7 @@ function university_post_types(){
     register_post_type('event', array(
     	'capability_type' => 'event',
         'map_meta_cap' => true,
+        'show_in_rest' => true,
         'supports' => array(
             'title', 'editor', 'excerpt', 'custom-fields'
         ),
@@ -26,6 +27,7 @@ function university_post_types(){
 	register_post_type('program',array(
 		'capability_type' => 'program',
 		'map_meta_cap' => true,
+		'show_in_rest' => true,
 		'supports' => array('title', 'editor'),
 		'rewrite'=> array('slug' => 'programs' ),
 		'has_archive' => true,
@@ -44,6 +46,7 @@ function university_post_types(){
 		'supports' => array('title', 'editor', 'thumbnail'),
 		'rewrite'=> array('slug' => 'professors'),
 		'has_archive' => true,
+		'show_in_rest' => true,
 		'public' => true,
 		'labels' => array(
 			'name' => "Professors",
@@ -53,6 +56,22 @@ function university_post_types(){
 			'singular_name' => "Professor"
 		),
 		'menu_icon' => 'dashicons-welcome-learn-more'
+	));
+
+	register_post_type('note',array(
+		'supports' => array('title', 'editor', 'thumbnail'),
+		'rewrite'=> array('slug' => 'notes'),
+		'show_in_rest' => true, // include post type in REST API, show block editor
+		'show_ui' => true, // generate and allow UI for managing this post type in admin
+		'public' => false, // whether the post is intended to be used publicly either via admin or front-end
+		'labels' => array(
+			'name' => "Notes",
+			'add_new_item' => 'Add New Note',
+			'edit_item' => 'Edit Note',
+			'all_items' => 'All Notes',
+			'singular_name' => "Note"
+		),
+		'menu_icon' => 'dashicons-welcome-write-blog'
 	));
 }
 

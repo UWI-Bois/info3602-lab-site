@@ -18,6 +18,8 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11" />
+<!--    fix this at production-->
+    <link rel="shortcut icon" href="#" />
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> >
@@ -45,6 +47,13 @@
                 <div class="site-header__util">
                     <?php
                     if(is_user_logged_in()){ ?>
+
+<!--                        my notes button-->
+                        <a href="<?php echo esc_url(site_url('my-notes')); ?>" class="btn btn--small btn--orange float-left push-right">
+                            My Notes
+                        </a>
+
+<!--                        logout button-->
                         <a href="<?php echo wp_logout_url(); ?>" class="btn btn--small btn--dark-orange float-left btn--with-photo">
                             <span class="site-header__avatar">
                                 <?php get_avatar(get_current_user_id(), 60); ?>
