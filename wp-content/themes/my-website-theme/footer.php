@@ -39,7 +39,7 @@
                         <h3 class="headline headline--small">Connect With Us</h3>
                         <nav>
                             <ul class="min-list social-icons-list group">
-                                <li><a href="#" class="social-color-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="<?php echo site_url('/jjs'); ?>" class="social-color-facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                 <li><a href="#" class="social-color-twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                                 <li><a href="https://www.youtube.com/channel/UCwixW22hYGIz_u0pkoxQTjg" class="social-color-youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
                                 <li><a href="#" class="social-color-linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>

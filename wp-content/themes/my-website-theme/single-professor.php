@@ -12,15 +12,11 @@ while(have_posts()){ // iterate through all posts
 
             <div class="row">
                 <div class="col">
-
 		                <?php the_post_thumbnail(); ?>
-
                 </div>
 
                 <div class="col">
-
 		                <?php the_content(); ?>
-
                 </div>
             </div>
 
