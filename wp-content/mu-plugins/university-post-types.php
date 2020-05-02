@@ -1,7 +1,12 @@
 <?php
-
+/*
+ * any file within the mu-plugins folder will be included at runtime, and wp will NEED it to run
+ */
 // lab 6 -> custom post
 function university_post_types(){
+	/*
+	 * this function will declare the custom post types to be used for the website
+	 */
     register_post_type('event', array(
     	'capability_type' => 'event',
         'map_meta_cap' => true,
