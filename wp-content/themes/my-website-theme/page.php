@@ -1,14 +1,8 @@
 <?php // exercise 1 lecture 3
 get_header();
-// jump back into php
-while (have_posts()) { // iterate through all posts
+while (have_posts()) { // grab the post for this page
     the_post(); // curr post
     pageBanner($args=null);
-//    pageBanner(array(
-//            'title' => 'page banner title',
-//        'subtitle' => 'page banner subtitle',
-//    ));
-    // jump out of php into html
 ?>
 
 

@@ -7,16 +7,17 @@ while(have_posts()){ // get this specific food post
     pageBanner(array());
     ?>
     <div class="container container--narrow page-section">
-        <div class="metabox metabox--position-up metabox--with-home-link">
-            <p>
-                <a class="metabox__blog-home-link" href="<?php echo get_post_type_archive_link('event') ?>">
-                    <i class="fa fa-home" aria-hidden="true"></i>
-                    Event Home
-                </a>
-            </p>
-        </div>
+
         <div class="generic-content">
-            <? the_content(); ?>
+            <div class="row">
+                <div class="col">
+			        <?php the_post_thumbnail(); ?>
+                </div>
+
+                <div class="col">
+			        <?php the_content(); ?>
+                </div>
+            </div>
         </div>
         <?php
         wp_reset_postdata();
