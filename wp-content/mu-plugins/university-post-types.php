@@ -11,6 +11,8 @@ function university_post_types(){
     	'capability_type' => 'event',
         'map_meta_cap' => true,
         'show_in_rest' => true,
+        'show_ui' => true,
+	    "show_in_menu" => true,
         'supports' => array(
             'title', 'editor', 'excerpt', 'custom-fields'
         ),

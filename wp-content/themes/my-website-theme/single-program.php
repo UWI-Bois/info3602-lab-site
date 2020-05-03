@@ -38,7 +38,7 @@ while(have_posts()){ // iterate through all posts
 //            echo "found related profs";
             ?>
             <hr class="section-break">
-            <h2 class="headline headline--medium"> <?php get_the_title(); ?> Professors </h2>
+            <h2 class="headline headline--medium"> <?php echo get_the_title(); ?> Professors </h2>
             <ul class="professor-cards">
             <?php
             while($relatedProfs->have_posts()){
