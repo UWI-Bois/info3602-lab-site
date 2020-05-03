@@ -12,6 +12,10 @@ while (have_posts()) { // grab my notes page from admin dash
 
     <div class="container container--narrow page-section">
         <h1>Task 1</h1>
+        <button class="height-btn">
+            Click me to do Task 1 where height = 5.
+        </button>
+        <div id="height-div"></div>
 
     </div>
 

@@ -1,9 +1,10 @@
 import $ from 'jquery';
+
 class MyNotes{
     constructor(){
         console.log('MyNotes says hi :)');
         this.deleteBtn = $(".delete-note");
-       this.events();
+        this.events();
     }
 
     events(){
