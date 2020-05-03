@@ -17,6 +17,7 @@ function jj_post_types(){
 //		'capability_type' => 'jj', // breaks it
 		'map_meta_cap' => true,
 		'show_in_rest' => true,
+		'show_ui' => true,
 		'rewrite'=> array('slug' => 'jjs'),
 		'has_archive' => true,
 		'public' => true,

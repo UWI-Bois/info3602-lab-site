@@ -4,8 +4,8 @@ if(!is_user_logged_in()){
     exit; // save resources
 }
 get_header();
-while (have_posts()) { // iterate through all posts
-    the_post(); // curr post
+while (have_posts()) { // grab my notes page from admin dash
+    the_post();
     pageBanner($args=null);
 ?>
 

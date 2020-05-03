@@ -36,6 +36,11 @@ require get_theme_file_path('inc/exercise-week14.php');
     }
 
     function university_adjust_queries($query){
+        /*
+         * this function runs queries on all the custom post types we have.
+         * very powerful
+         * if you make new custom post types, consider adjusting them here.
+         */
         if(
             !is_admin() AND
             is_post_type_archive('event') AND
@@ -44,12 +49,6 @@ require get_theme_file_path('inc/exercise-week14.php');
             $query->set('meta_key', 'event_date');
             $query->set('orderby', 'meta_value_num');
             $query->set('order', 'ASC');
-            $query->set('meta_query', array(
-                'key'=> 'event_date',
-                'compare' => '>=',
-                'value' => date('Ymd'),
-                'type' => 'numeric'
-            ));
             wp_reset_postdata();
         }
 
@@ -75,7 +74,8 @@ require get_theme_file_path('inc/exercise-week14.php');
 			wp_reset_postdata();
         }
     }
-    add_action('pre_get_posts', 'university_adjust_queries'); // this query affects everything globally, very powerful!, even affects the admin dash
+    // this query affects everything globally, very powerful!, even affects the admin dash
+    add_action('pre_get_posts', 'university_adjust_queries');
 
     // type of instruction for wordpress to run, function name to run
     add_action('wp_enqueue_scripts', 'university_files');

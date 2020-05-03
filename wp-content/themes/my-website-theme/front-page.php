@@ -1,24 +1,14 @@
 <?php get_header(); ?>
 <?php
+// these queries will override any existing parameters from functions.php
 $homepagePosts = new WP_Query(array(
-    'posts_per_page' => 5,
-//    'category_name' => 'Technology',
+    'posts_per_page' => 4,
+//    'category_name' => 'Award',
     'orderby' => 'title'
 ));
 $homepageEvents = new WP_Query(array(
-    'posts_per_page' => 5,
+    'posts_per_page' => 4,
     'post_type'=> 'event',
-    'meta_key' => 'event_date',
-    'orderby' => 'meta_value_num',
-    'order' => 'ASC',
-//    'meta_query' => array(
-//        array(
-//            'key' => 'event_date',
-//            'compare' => '>=',
-//            'value' => date('Ymd'),
-//            'type' => 'numeric'
-//        )
-//    )
 ));
 ?>
 <!--inside body-->
