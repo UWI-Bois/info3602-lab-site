@@ -13,7 +13,7 @@ function jj_post_types(){
 	register_post_type('jj',array(
 		'capability_type' => 'jj', // breaks it
 		'supports' => array(
-			'title', 'editor', 'excerpt', 'custom-fields'
+			'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail'
 		),
 		'map_meta_cap' => true,
 		'show_in_rest' => true,
@@ -30,10 +30,11 @@ function jj_post_types(){
 		),
 		'menu_icon' => 'dashicons-smiley'
 	));
+
 	// food
 	register_post_type('food',array(
 		'supports' => array(
-			'title', 'editor', 'excerpt', 'custom-fields'
+			'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail'
 		),
 		'capability_type' => 'food', // members plugin for roles and perms
 		'map_meta_cap' => true,
