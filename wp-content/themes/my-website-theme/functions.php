@@ -49,12 +49,6 @@ require get_theme_file_path('inc/exercise-week14.php');
             $query->set('meta_key', 'event_date');
             $query->set('orderby', 'meta_value_num');
             $query->set('order', 'ASC');
-            $query->set('meta_query', array(
-                'key'=> 'event_date',
-                'compare' => '>=',
-                'value' => date('Ymd'),
-                'type' => 'numeric'
-            ));
             wp_reset_postdata();
         }
 
