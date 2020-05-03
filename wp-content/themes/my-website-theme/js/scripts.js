@@ -13,3 +13,7 @@ var heroSlider = new HeroSlider();
 var search = new Search();
 
 console.log("scripts.js says hi :)");
+
+// lab 13
+import Lab13 from './lab13';
+var lab13 = new Lab13();
