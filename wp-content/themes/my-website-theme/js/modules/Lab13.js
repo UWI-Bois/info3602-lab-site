@@ -20,6 +20,9 @@ class Lab13{
         this.todoBtn = $(".todo-btn"); // . -> class
         this.todoDiv = $("#todo-div"); // # -> id
 
+        this.bookBtn = $(".book-btn"); // . -> class
+        this.bookDiv = $("#book-div"); // # -> id
+
         // make sure it runs in the object
         this.events();
     }
@@ -29,6 +32,7 @@ class Lab13{
         this.billBtn.on("click", this.billTask.bind(this));
         this.fruitBtn.on("click", this.fruitTask.bind(this));
         this.todoBtn.on("click", this.todoTask.bind(this));
+        this.bookBtn.on("click", this.bookTask.bind(this));
     }
 
 
@@ -106,7 +110,7 @@ class Lab13{
             // teneray operator like an if statement
             tasks.length ?
                 '<p> I have to: </p>' + // check plus sign
-                '<ul class="link-list min-list"> </ul>' // true
+                '<ul class="link-list min-list"> ' // true
             :  // else
                 '<p> no tasks found :( </p>'
             }
@@ -117,6 +121,45 @@ class Lab13{
                         </li>
                     `).join('') // remove commas
                 }
+            ${
+                tasks.length ? '</ul>' : ''
+            }
+        `);
+    }
+    bookTask(){
+        /*
+         Create an associative array of books and urls to the books,
+         and print out a bulleted unordered list <ul>of the book titles as links <a>
+
+        this can be solved using teneray operators within the string literals
+
+         */
+        var books = {
+            'Google Book' : 'http://www.google.com',
+            'YouTube Book' : 'http://www.youtube.com',
+            'Facebook Book' : 'http://www.facebook.com'
+        };
+        var bookKeys = Object.keys(books);
+        var bookVals = Object.values(books);
+        this.bookDiv.html(`
+            ${
+            // teneray operator like an if statement
+            bookKeys.length ?
+                '<p> Booklist: </p>' + // check plus sign
+                '<ul class="link-list min-list"> </ul>' // true
+            :  // else
+                '<p> no books found :( </p>'
+            }
+                ${ // this map will make iterate through all the keys
+                    bookKeys.map(key => `
+                        <li>
+                            <a href="${books[key]}">${key}</a>
+                        </li>
+                    `).join('')
+                }  
+            ${
+                bookKeys.length ? '</ul>' : ''
+            }     
         `);
     }
 
