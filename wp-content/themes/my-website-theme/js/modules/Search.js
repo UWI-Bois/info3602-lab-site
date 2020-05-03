@@ -12,12 +12,13 @@ class Search{
         this.searchField = $("#search-term");
         this.previousValue;
 
-        this.events();
         this.isOverlayOpen = false;
         this.typingTimer;
 
         this.isSpinnerVisible = false;
         this.resultsDiv = $("#search-overlay__results");
+
+        this.events();
     }
     //events
     events(){
