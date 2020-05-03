@@ -18,7 +18,7 @@ while(have_posts()){ // iterate through all posts
             <? the_content(); ?>
         </div>
         <?php
-        $relatedFields = get_field('related_programs');
+        $relatedFields = get_field('related_foods');
         //print_r($relatedFields);
         if($relatedFields){
             ?>

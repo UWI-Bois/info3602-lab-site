@@ -11,10 +11,10 @@ function jj_post_types(){
 
 	// me
 	register_post_type('jj',array(
+		'capability_type' => 'jj', // breaks it
 		'supports' => array(
 			'title', 'editor', 'excerpt', 'custom-fields'
 		),
-//		'capability_type' => 'jj', // breaks it
 		'map_meta_cap' => true,
 		'show_in_rest' => true,
 		'show_ui' => true,
@@ -35,7 +35,7 @@ function jj_post_types(){
 		'supports' => array(
 			'title', 'editor', 'excerpt', 'custom-fields'
 		),
-//		'capability_type' => 'food',
+		'capability_type' => 'food', // members plugin for roles and perms
 		'map_meta_cap' => true,
 		'show_in_rest' => true,
 		'rewrite'=> array('slug' => 'foods'),

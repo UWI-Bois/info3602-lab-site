@@ -49,6 +49,15 @@ require get_theme_file_path('inc/exercise-week14.php');
             $query->set('meta_key', 'event_date');
             $query->set('orderby', 'meta_value_num');
             $query->set('order', 'ASC');
+            $query->set('meta_query', array(
+                    array(
+                        'key' => 'event_date',
+                        'compare' => '>=',
+                        'value' => date('Ymd'),
+                        'type' => 'numeric'
+                    )
+            ));
+
             wp_reset_postdata();
         }
 
@@ -76,6 +85,27 @@ require get_theme_file_path('inc/exercise-week14.php');
     }
     // this query affects everything globally, very powerful!, even affects the admin dash
     add_action('pre_get_posts', 'university_adjust_queries');
+
+    function jj_adjust_queries($query){
+        // make sure we apply these rules to the frontend and NOT the admin dash
+        if (!is_admin() AND $query->is_main_query()){
+
+            // for jj posts
+            if(is_post_type_archive('jj')){
+	            $query->set('order', 'ASC');
+	            wp_reset_postdata();
+            }
+
+            // for food posts
+            if(is_post_type_archive('food')){
+	            $query->set('order', 'DESC');
+	            wp_reset_postdata();
+            }
+
+
+        }
+    }
+    add_action('pre_get_posts', 'jj_adjust_queries');
 
     // type of instruction for wordpress to run, function name to run
     add_action('wp_enqueue_scripts', 'university_files');
