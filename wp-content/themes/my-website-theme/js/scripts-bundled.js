@@ -108,18 +108,6 @@ eval("var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPAC
 
 /***/ }),
 
-/***/ "./wp-content/themes/my-website-theme/js/lab13.js":
-/*!********************************************************!*\
-  !*** ./wp-content/themes/my-website-theme/js/lab13.js ***!
-  \********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\n// 3rd party packages from NPM\n\n\nvar Lab13 = function Lab13() {\n  _classCallCheck(this, Lab13);\n\n  console.log('Lab13 says hi :)');\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Lab13);\n\n//# sourceURL=webpack:///./wp-content/themes/my-website-theme/js/lab13.js?");
-
-/***/ }),
-
 /***/ "./wp-content/themes/my-website-theme/js/modules/HeroSlider.js":
 /*!*********************************************************************!*\
   !*** ./wp-content/themes/my-website-theme/js/modules/HeroSlider.js ***!
@@ -132,6 +120,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jque
 
 /***/ }),
 
+/***/ "./wp-content/themes/my-website-theme/js/modules/Lab13.js":
+/*!****************************************************************!*\
+  !*** ./wp-content/themes/my-website-theme/js/modules/Lab13.js ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\n// 3rd party packages from NPM\n\n\nvar Lab13 = function Lab13() {\n  _classCallCheck(this, Lab13);\n\n  console.log('Lab13 says hi :)');\n  this.height = 5;\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Lab13);\n\n//# sourceURL=webpack:///./wp-content/themes/my-website-theme/js/modules/Lab13.js?");
+
+/***/ }),
+
 /***/ "./wp-content/themes/my-website-theme/js/modules/MobileMenu.js":
 /*!*********************************************************************!*\
   !*** ./wp-content/themes/my-website-theme/js/modules/MobileMenu.js ***!
@@ -141,6 +141,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jque
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\n\n\nvar MobileMenu = /*#__PURE__*/function () {\n  function MobileMenu() {\n    _classCallCheck(this, MobileMenu);\n\n    this.menu = jquery__WEBPACK_IMPORTED_MODULE_0___default()(\".site-header__menu\");\n    this.openButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()(\".site-header__menu-trigger\");\n    this.events();\n  }\n\n  _createClass(MobileMenu, [{\n    key: \"events\",\n    value: function events() {\n      this.openButton.on(\"click\", this.openMenu.bind(this));\n    }\n  }, {\n    key: \"openMenu\",\n    value: function openMenu() {\n      this.openButton.toggleClass(\"fa-bars fa-window-close\");\n      this.menu.toggleClass(\"site-header__menu--active\");\n    }\n  }]);\n\n  return MobileMenu;\n}();\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (MobileMenu);\n\n//# sourceURL=webpack:///./wp-content/themes/my-website-theme/js/modules/MobileMenu.js?");
+
+/***/ }),
+
+/***/ "./wp-content/themes/my-website-theme/js/modules/MyNotes.js":
+/*!******************************************************************!*\
+  !*** ./wp-content/themes/my-website-theme/js/modules/MyNotes.js ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\n\n\nvar MyNotes = /*#__PURE__*/function () {\n  function MyNotes() {\n    _classCallCheck(this, MyNotes);\n\n    console.log('MyNotes says hi :)');\n    this.deleteBtn = jquery__WEBPACK_IMPORTED_MODULE_0___default()(\".delete-note\");\n    this.events();\n  }\n\n  _createClass(MyNotes, [{\n    key: \"events\",\n    value: function events() {\n      this.deleteBtn.on(\"click\", this.deleteNote.bind(this));\n    } //Additional methods\n\n  }, {\n    key: \"deleteNote\",\n    value: function deleteNote() {\n      console.log('delete note pushed!');\n      jquery__WEBPACK_IMPORTED_MODULE_0___default.a.ajax({\n        url: universityData.r,\n        type: 'DELETE' // success: x,\n        // error: x\n\n      });\n    }\n  }]);\n\n  return MyNotes;\n}();\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (MyNotes);\n\n//# sourceURL=webpack:///./wp-content/themes/my-website-theme/js/modules/MyNotes.js?");
 
 /***/ }),
 
@@ -164,7 +176,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jque
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! slick-carousel */ \"./node_modules/slick-carousel/slick/slick.js\");\n/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/MobileMenu */ \"./wp-content/themes/my-website-theme/js/modules/MobileMenu.js\");\n/* harmony import */ var _modules_HeroSlider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/HeroSlider */ \"./wp-content/themes/my-website-theme/js/modules/HeroSlider.js\");\n/* harmony import */ var _modules_Search__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/Search */ \"./wp-content/themes/my-website-theme/js/modules/Search.js\");\n/* harmony import */ var _lab13__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./lab13 */ \"./wp-content/themes/my-website-theme/js/lab13.js\");\n// 3rd party packages from NPM\n\n // Our modules / classes\n\n\n\n // Instantiate a new object using our modules/classes\n\nvar mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\nvar heroSlider = new _modules_HeroSlider__WEBPACK_IMPORTED_MODULE_3__[\"default\"]();\nvar search = new _modules_Search__WEBPACK_IMPORTED_MODULE_4__[\"default\"]();\nconsole.log(\"scripts.js says hi :)\"); // lab 13\n\n\nvar lab13 = new _lab13__WEBPACK_IMPORTED_MODULE_5__[\"default\"]();\n\n//# sourceURL=webpack:///./wp-content/themes/my-website-theme/js/scripts.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! slick-carousel */ \"./node_modules/slick-carousel/slick/slick.js\");\n/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/MobileMenu */ \"./wp-content/themes/my-website-theme/js/modules/MobileMenu.js\");\n/* harmony import */ var _modules_HeroSlider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/HeroSlider */ \"./wp-content/themes/my-website-theme/js/modules/HeroSlider.js\");\n/* harmony import */ var _modules_Search__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/Search */ \"./wp-content/themes/my-website-theme/js/modules/Search.js\");\n/* harmony import */ var _modules_MyNotes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/MyNotes */ \"./wp-content/themes/my-website-theme/js/modules/MyNotes.js\");\n/* harmony import */ var _modules_Lab13__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/Lab13 */ \"./wp-content/themes/my-website-theme/js/modules/Lab13.js\");\n// 3rd party packages from NPM\n\n // Our modules / classes\n\n\n\n\n // Instantiate a new object using our modules/classes\n\nvar mobileMenu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_2__[\"default\"]();\nvar heroSlider = new _modules_HeroSlider__WEBPACK_IMPORTED_MODULE_3__[\"default\"]();\nvar search = new _modules_Search__WEBPACK_IMPORTED_MODULE_4__[\"default\"]();\nvar mynotes = new _modules_MyNotes__WEBPACK_IMPORTED_MODULE_5__[\"default\"]();\nconsole.log(\"scripts.js says hi :)\"); // lab 13\n\n\nvar lab13 = new _modules_Lab13__WEBPACK_IMPORTED_MODULE_6__[\"default\"]();\n\n//# sourceURL=webpack:///./wp-content/themes/my-website-theme/js/scripts.js?");
 
 /***/ })
 

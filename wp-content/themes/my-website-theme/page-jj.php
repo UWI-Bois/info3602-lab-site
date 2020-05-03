@@ -3,6 +3,10 @@
  * page for testing and revising,
  * this page will test custom: pages, post types, queries
  */
+if(!is_user_logged_in()){
+	wp_redirect(esc_url(site_url('/')));
+	exit; // save resources
+}
 get_header(); // load header file
 while (have_posts()) { // grab page from admin dash (jj page)
 the_post(); // curr post

@@ -5,6 +5,7 @@ class Lab13{
 
     constructor() {
         console.log('Lab13 says hi :)');
+        this.height = 5;
     }
 
 }

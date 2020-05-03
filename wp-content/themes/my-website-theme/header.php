@@ -27,7 +27,7 @@
         <div class="container">
             <h1 class="school-logo-text float-left"><a href="<?php echo site_url(); ?>"><strong>Bizarre</strong> University</a></h1>
 
-<!--            <span class="js-search-trigger site-header__search-trigger"><i class="fa fa-search" aria-hidden="true"></i></span>-->
+            <span class="js-search-trigger site-header__search-trigger"><i class="fa fa-search" aria-hidden="true"></i></span>
 
             <div class="site-header__menu group">
                 <nav class="main-navigation">
