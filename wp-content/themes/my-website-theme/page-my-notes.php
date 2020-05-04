@@ -27,19 +27,21 @@ while (have_posts()) { // grab my notes page from admin dash
                 $userNotes->the_post();
             ?>
                 <li>
-                    <input class="note-title-field" value="<?php echo esc_attr(get_the_title()); ?>">
-
-<!--                    crud buttons-->
-                    <span class="edit-note">
-                        <i class="fa fa-pencil" aria-hidden="true"></i>
-                        Edit
-                    </span>
-                    <span class="delete-note">
-                        <i class="fa fa-trash-o" aria-hidden="true"></i>
-                        Delete
-                    </span>
-
-                    <textarea class="note-body-field"><?php echo esc_attr(strip_tags(get_the_content())); ?></textarea>
+                    <label>
+                        <input class="note-title-field" value="<?php echo esc_attr(get_the_title()); ?>">
+                        <!--                    crud buttons-->
+                        <span class="edit-note">
+                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                            Edit
+                        </span>
+                        <span class="delete-note">
+                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                            Delete
+                        </span>
+                        <textarea class="note-body-field">
+                            <?php echo esc_attr(strip_tags(get_the_content())); ?>
+                        </textarea>
+                    </label>
                 </li>
 
                 <?php

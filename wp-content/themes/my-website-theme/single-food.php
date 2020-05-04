@@ -1,5 +1,9 @@
 <?php // exercise 1 lecture 3
 //the_ID();
+if(!is_user_logged_in()){
+	wp_redirect(esc_url(site_url('/')));
+	exit; // save resources
+}
 get_header();
 while(have_posts()){ // get this specific food post
     the_post(); // curr post

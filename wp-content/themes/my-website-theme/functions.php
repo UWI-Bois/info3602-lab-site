@@ -6,6 +6,7 @@ require get_theme_file_path('inc/exercise-week14.php');
     function university_files(){
 	    wp_enqueue_script('main-university-js', get_theme_file_uri('/js/scripts-bundled.js'), array('jquery'), '1.0',true);
 
+	    // todo what is this
 	    wp_localize_script(
 	            'main-university-js',
             'universityData',
