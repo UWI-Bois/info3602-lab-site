@@ -39,6 +39,7 @@
                     </p>
                 </div>
 
+
                 <div class="generic-content">
                     <p><?php the_excerpt(); ?></p>
                 </div>
