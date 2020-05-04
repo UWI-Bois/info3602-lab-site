@@ -1,6 +1,4 @@
 <?php
-
-
 /*
  * creating an endpoint and route
  * 1. make a function to specify what we want to return
@@ -9,6 +7,7 @@
  *
  * NOTES:
  *  you can easily test this by visiting the combined namespace+route from step (2) in the url, eg: /wp-json/hello-world/v1 -> this will return all routes available
+ * rest api
  *
  */
 

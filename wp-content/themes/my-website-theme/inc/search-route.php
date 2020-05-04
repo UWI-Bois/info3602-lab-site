@@ -7,6 +7,7 @@
  * 3. add the function from (2) to a hook when we initialize the wordpress api.
  *
  * NOTES: you can easily test this by visiting the combined namespace+route from step (2) in the url, eg: /wp-json/university/v1/search
+ * rest api
  */
 
 function universitySearchResults(){

@@ -33,7 +33,6 @@ class Search{
         // setTimeout(function () {
         //     console.log("timeout test")
         // }, 2000);
-
         if(this.searchField.val() != this.previousValue){ // check for changes in the text in the search bar
             clearTimeout(this.typingTimer); // reset any timer on this class var
             //check if the user deleted the script
@@ -109,7 +108,6 @@ class Search{
     // key event methods
     keyPressDispatcher(e){
         // checks for keypresses and does things if certain keys are pressed
-
         // console.log("this is a test")
         if(e.keyCode == 83 && !this.isOverlayOpen) this.openOverlay(); // open the search overlay if 's' is pressed
         if(e.keyCode == 27 && this.isOverlayOpen) this.closeOverlay(); // close the search overlay if 'esc' is pressed
