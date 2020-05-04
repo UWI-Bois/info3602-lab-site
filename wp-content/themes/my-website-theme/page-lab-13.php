@@ -46,6 +46,7 @@ while (have_posts()) { // grab my notes page from admin dash
 
         <h1>Task 2</h1>
         <hr>
+
         <input type="number" class="ineq-inp" value="0">
         <button class="ineq-btn">
             Click me to see the inequality.
@@ -65,6 +66,12 @@ while (have_posts()) { // grab my notes page from admin dash
         <div id="sleep-div"> </div>
         <hr>
 
+        <input type="number" class="grade-inp" value="0">
+        <button class="grade-btn">
+            Click me to see the grade.
+        </button>
+        <div id="grade-div"> </div>
+        <hr>
 
     </div>
 

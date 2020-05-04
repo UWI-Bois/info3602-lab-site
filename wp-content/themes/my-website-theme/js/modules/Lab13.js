@@ -33,6 +33,10 @@ class Lab13{
         this.ineqInp = $(".ineq-inp"); // . -> class
         this.ineqDiv = $("#ineq-div"); // # -> id
 
+        this.gradeBtn = $(".grade-btn"); // . -> class
+        this.gradeInp = $(".grade-inp"); // . -> class
+        this.gradeDiv = $("#grade-div"); // # -> id
+
         // make sure it runs in the object
         this.events();
     }
@@ -46,6 +50,7 @@ class Lab13{
         this.ineqBtn.on("click", this.ineqTask.bind(this));
         this.fillBtn.on("click", this.fillTask.bind(this));
         this.sleepBtn.on("click", this.sleepTask.bind(this));
+        this.gradeBtn.on("click", this.gradeTask.bind(this));
     }
 
 
@@ -221,6 +226,17 @@ class Lab13{
             (hour >= 8) ? '<p> Go to sleep </p>'
                 :
                 '<p> Doing great </p>'
+        }
+        `);
+    }
+
+    gradeTask(){
+        var num = parseInt(this.gradeInp.val());
+        this.gradeDiv.html(`
+        ${
+            (num < 50) ? '<p> Fail </p>' 
+                : (num < 80) ? '<p> Pass </p>'
+                : (num >= 80) ? '<p> A </p>' : ''      
         }
         `);
     }
