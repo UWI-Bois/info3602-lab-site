@@ -46,6 +46,24 @@ while (have_posts()) { // grab my notes page from admin dash
 
         <h1>Task 2</h1>
         <hr>
+        <input type="number" class="ineq-inp" value="0">
+        <button class="ineq-btn">
+            Click me to see the inequality.
+        </button>
+        <div id="ineq-div"> </div>
+        <hr>
+
+        <button class="fill-btn">
+            Click me to see arrays and their fillings (if they are).
+        </button>
+        <div id="fill-div"> </div>
+        <hr>
+
+        <button class="sleep-btn">
+            Click me to see if to sleep or do.
+        </button>
+        <div id="sleep-div"> </div>
+        <hr>
 
 
     </div>

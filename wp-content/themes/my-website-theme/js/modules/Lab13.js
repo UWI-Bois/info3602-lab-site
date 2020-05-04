@@ -23,6 +23,16 @@ class Lab13{
         this.bookBtn = $(".book-btn"); // . -> class
         this.bookDiv = $("#book-div"); // # -> id
 
+        this.fillBtn = $(".fill-btn"); // . -> class
+        this.fillDiv = $("#fill-div"); // # -> id
+
+        this.sleepBtn = $(".sleep-btn"); // . -> class
+        this.sleepDiv = $("#sleep-div"); // # -> id
+
+        this.ineqBtn = $(".ineq-btn"); // . -> class
+        this.ineqInp = $(".ineq-inp"); // . -> class
+        this.ineqDiv = $("#ineq-div"); // # -> id
+
         // make sure it runs in the object
         this.events();
     }
@@ -33,6 +43,9 @@ class Lab13{
         this.fruitBtn.on("click", this.fruitTask.bind(this));
         this.todoBtn.on("click", this.todoTask.bind(this));
         this.bookBtn.on("click", this.bookTask.bind(this));
+        this.ineqBtn.on("click", this.ineqTask.bind(this));
+        this.fillBtn.on("click", this.fillTask.bind(this));
+        this.sleepBtn.on("click", this.sleepTask.bind(this));
     }
 
 
@@ -160,6 +173,55 @@ class Lab13{
             ${
                 bookKeys.length ? '</ul>' : ''
             }     
+        `);
+    }
+
+    ineqTask(){
+        var num = parseInt(this.ineqInp.val());
+        this.ineqDiv.html(`
+        ${
+            (num > 0) ? '<p> positive </p>'
+                :
+                '<p> negative </p>'
+        } 
+        `);
+    }
+
+    fillTask(){
+        var arr1 = [1,2,3];
+        var arr2 = [];
+        this.fillDiv.html(`
+        <p> Testing this array1 : ${arr1} </p>
+        ${
+            (arr1.length > 0) ? '<p> filled </p>'
+                :
+                '<p> empty </p>'
+        } 
+        <p> Testing this array2 : ${arr2} </p>
+        ${
+            (arr2.length > 0) ? '<p> filled </p>'
+                :
+                '<p> empty </p>'
+        } 
+        `);
+    }
+
+    sleepTask(){
+        var today = new Date();
+        var hour = today.getHours();
+        var mins = today.getMinutes();
+
+        // convert to 12 hr format
+        if(hour > 12) hour -= 12;
+        else hour += 12;
+
+        this.sleepDiv.html(`
+        <p>Current time: ${hour}:${mins}</p>
+        ${
+            (hour >= 8) ? '<p> Go to sleep </p>'
+                :
+                '<p> Doing great </p>'
+        }
         `);
     }
 
