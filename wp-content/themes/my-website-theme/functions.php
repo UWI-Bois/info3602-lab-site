@@ -154,7 +154,7 @@ require get_theme_file_path('inc/exercise-week14.php');
     function isAdmin(){
         /*
          * utility function to determine if the current signed in user
-         * is a subscriber or not.
+         * is an admin or not.
          *
          * returns bool
          */
@@ -177,17 +177,6 @@ require get_theme_file_path('inc/exercise-week14.php');
     }
     add_action('admin_init', 'redirectSubsToFrontend');
 
-    function redirectAdminsToFrontend(){
-        /*
-         * redirect subs to the homepage after signing in.
-         * refer to the hook right under.
-         */
-        if(isAdmin()){
-            wp_redirect(site_url('/'));
-            exit; // tell php to stop once someone is redirected
-        }
-    }
-    add_action('admin_init', 'redirectAdminsToFrontend');
 
     function noSubsAdminBar(){
         /*
