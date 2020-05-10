@@ -1,0 +1,4 @@
+[25-Apr-2020 16:46:06 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/ajays193/public_html/wp-content/themes/my-website-theme/index.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/ajays193/public_html/wp-content/themes/my-website-theme/index.php on line 3

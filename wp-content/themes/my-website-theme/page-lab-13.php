@@ -7,6 +7,9 @@ while (have_posts()) { // grab my notes page from admin dash
 
 
     <div class="container container--narrow page-section">
+        <h1>Files</h1>
+        <p><?php the_content(); ?></p>
+        <hr>
         <h1>Task 1</h1>
         <hr>
         <button class="height-btn">
