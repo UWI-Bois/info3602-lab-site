@@ -151,6 +151,20 @@ require get_theme_file_path('inc/exercise-week14.php');
 	    return false;
     }
 
+    function isAdmin(){
+        /*
+         * utility function to determine if the current signed in user
+         * is a subscriber or not.
+         *
+         * returns bool
+         */
+	    $currUser = wp_get_current_user();
+	    $numRoles = count($currUser->roles);
+	    $userRole = $currUser->roles[0];
+	    if($numRoles == 1 AND $userRole == 'administrator') return true;
+	    return false;
+    }
+
     function redirectSubsToFrontend(){
         /*
          * redirect subs to the homepage after signing in.
@@ -162,6 +176,18 @@ require get_theme_file_path('inc/exercise-week14.php');
         }
     }
     add_action('admin_init', 'redirectSubsToFrontend');
+
+    function redirectAdminsToFrontend(){
+        /*
+         * redirect subs to the homepage after signing in.
+         * refer to the hook right under.
+         */
+        if(isAdmin()){
+            wp_redirect(site_url('/'));
+            exit; // tell php to stop once someone is redirected
+        }
+    }
+    add_action('admin_init', 'redirectAdminsToFrontend');
 
     function noSubsAdminBar(){
         /*

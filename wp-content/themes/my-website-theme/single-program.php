@@ -9,9 +9,9 @@ while(have_posts()){ // iterate through all posts
     <div class="container container--narrow page-section">
         <div class="metabox metabox--position-up metabox--with-home-link">
             <p>
-                <a class="metabox__blog-home-link" href="<?php echo get_post_type_archive_link('event') ?>">
+                <a class="metabox__blog-home-link" href="<?php echo get_post_type_archive_link('program') ?>">
                     <i class="fa fa-home" aria-hidden="true"></i>
-                    Event Home
+                    Back to Programs
                 </a>
             </p>
         </div>
@@ -114,7 +114,7 @@ while(have_posts()){ // iterate through all posts
         }
         ?>
         <hr class="section-break">
-        <a href="<?php echo get_post_type_archive_link('program'); ?>" class="btn btn--large btn--blue">View All Programs</a>
+        <a href="<?php echo get_post_type_archive_link('event'); ?>" class="btn btn--large btn--blue">Check out our Events!</a>
     </div>
     <?php
 } // end while

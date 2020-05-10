@@ -1,8 +1,4 @@
 <?php // lab 13
-if(!is_user_logged_in()){
-    wp_redirect(esc_url(site_url('/')));
-    exit; // save resources
-}
 get_header();
 while (have_posts()) { // grab my notes page from admin dash
     the_post();
